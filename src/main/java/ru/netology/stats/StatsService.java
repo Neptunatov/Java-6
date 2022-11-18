@@ -23,7 +23,7 @@ public class StatsService{
                 maxMonth = i;
             }
         }
-        return maxMonth;
+        return maxMonth+1;
     }
 
     public int calculateMin(int[] month) {
@@ -33,13 +33,13 @@ public class StatsService{
                 minMonth = i;
             }
         }
-        return minMonth;
+        return minMonth+1;
     }
 
     public int calculateMore(int[] month) {
         int moreThanAverage = 0;
         for (int i = 0; i < month.length; i++) {
-            int average=0;
+            int average=Arrays.stream(month).sum() / 12;
             if (month[i] > average) {
                 moreThanAverage++;
             }
@@ -50,7 +50,7 @@ public class StatsService{
     public int calculateBelow(int[] month) {
         int belowAverage = 0;
         for (int i = 0; i < month.length; i++) {
-            int average=0;
+            int average=Arrays.stream(month).sum() / 12;
             if (month[i] < average) {
                 belowAverage++;
             }
