@@ -11,9 +11,9 @@ public class StatsServiceTest {
         int[] month = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
         StatsService service = new StatsService();
         int expected = 12;
-        int[] set = service.calculate(month);
+        int sum = service.calculateSum(month);
 
-        assertEquals(expected, set[0]); //sum
+        assertEquals(expected,sum); //sum
     }
 
     @Test
@@ -21,9 +21,9 @@ public class StatsServiceTest {
         int[] month = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
         StatsService service = new StatsService();
         int expected = 1;
-        int[] set = service.calculate(month);
+        int average= service.calculateAverage(month);
 
-        assertEquals(expected, set[1]); //Average
+        assertEquals(expected, average); //Average
     }
 
     @Test
@@ -31,9 +31,9 @@ public class StatsServiceTest {
         int[] month = new int[]{1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1};
         StatsService service = new StatsService();
         int expected = 4;
-        int[] set = service.calculate(month);
+        int maxMonth= service.calculateMax(month);
 
-        assertEquals(expected, set[2]); //maxSales
+        assertEquals(expected, maxMonth); //maxSales
     }
 
     @Test
@@ -41,9 +41,9 @@ public class StatsServiceTest {
         int[] month = new int[]{2, 2, 2, 2, 1, 1, 1, 2, 1, 1, 1, 2};
         StatsService service = new StatsService();
         int expected = 11;
-        int[] set = service.calculate(month);
+        int minMonth= service.calculateMin(month);
 
-        assertEquals(expected, set[3]); //minSales
+        assertEquals(expected, minMonth); //minSales
     }
 
     @Test
@@ -51,9 +51,9 @@ public class StatsServiceTest {
         int[] month = new int[]{3, 3, 3, 3, 1, 1, 1, 1, 2, 2, 2, 2};
         StatsService service = new StatsService();
         int expected = 4;
-        int[] set = service.calculate(month);
+        int moreThanAverage= service.calculateMore(month);
 
-        assertEquals(expected, set[4]); //more
+        assertEquals(expected, moreThanAverage); //more
     }
 
     @Test
@@ -61,8 +61,8 @@ public class StatsServiceTest {
         int[] month = new int[]{3, 3, 3, 3, 1, 1, 1, 1, 2, 2, 2, 2};
         StatsService service = new StatsService();
         int expected = 4;
-        int[] set = service.calculate(month);
+        int belowAverage= service.calculateBelow(month);
 
-        assertEquals(expected, set[5]); //below
+        assertEquals(expected, belowAverage); //below
     }
 }
