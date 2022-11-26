@@ -5,12 +5,11 @@ public class Main {
         StatsService service = new StatsService();
         int[] month = new int[]{12, 30, 30, 9, 6, 7, 8, 12, 6, 30, 11, 22};
         int sum = service.calculateSum(month);
-        int average= service.calculateAverage(month);
-        int maxMonth= service.calculateMax(month);
-        int minMonth= service.calculateMin(month);
-        int moreThanAverage= service.calculateMore(month);
-        int belowAverage= service.calculateBelow(month);
-
+        int average = service.calculateAverage(month);
+        int maxMonth = service.calculateMax(month);
+        int minMonth = service.calculateMin(month);
+        int moreThanAverage = service.calculateMore(month);
+        int belowAverage = service.calculateBelow(month);
 
 
         System.out.println("Сумма всех продаж  " + sum);

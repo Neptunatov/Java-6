@@ -13,7 +13,7 @@ public class StatsServiceTest {
         int expected = 12;
         int sum = service.calculateSum(month);
 
-        assertEquals(expected,sum); //sum
+        assertEquals(expected, sum); //sum
     }
 
     @Test
@@ -21,7 +21,7 @@ public class StatsServiceTest {
         int[] month = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
         StatsService service = new StatsService();
         int expected = 1;
-        int average= service.calculateAverage(month);
+        int average = service.calculateAverage(month);
 
         assertEquals(expected, average); //Average
     }
@@ -31,7 +31,7 @@ public class StatsServiceTest {
         int[] month = new int[]{1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1};
         StatsService service = new StatsService();
         int expected = 4;
-        int maxMonth= service.calculateMax(month);
+        int maxMonth = service.calculateMax(month);
 
         assertEquals(expected, maxMonth); //maxSales
     }
@@ -41,7 +41,7 @@ public class StatsServiceTest {
         int[] month = new int[]{2, 2, 2, 2, 1, 1, 1, 2, 1, 1, 1, 2};
         StatsService service = new StatsService();
         int expected = 11;
-        int minMonth= service.calculateMin(month);
+        int minMonth = service.calculateMin(month);
 
         assertEquals(expected, minMonth); //minSales
     }
@@ -51,7 +51,7 @@ public class StatsServiceTest {
         int[] month = new int[]{3, 3, 3, 3, 1, 1, 1, 1, 2, 2, 2, 2};
         StatsService service = new StatsService();
         int expected = 4;
-        int moreThanAverage= service.calculateMore(month);
+        int moreThanAverage = service.calculateMore(month);
 
         assertEquals(expected, moreThanAverage); //more
     }
@@ -61,7 +61,7 @@ public class StatsServiceTest {
         int[] month = new int[]{3, 3, 3, 3, 1, 1, 1, 1, 2, 2, 2, 2};
         StatsService service = new StatsService();
         int expected = 4;
-        int belowAverage= service.calculateBelow(month);
+        int belowAverage = service.calculateBelow(month);
 
         assertEquals(expected, belowAverage); //below
     }
